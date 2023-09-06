@@ -1,0 +1,39 @@
+.body{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.botonmas{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.mdc-data-table__cell{
+  text-align: center;
+}
+
+.mdc-data-table__header-cell{
+  text-align: center;
+}
+
+th.mat-mdc-header-cell.mdc-data-table__header-cell.cdk-header-cell.cdk-column-cantidadAsientos.mat-column-cantidadAsientos.ng-star-inserted {
+  background-color: rgba(211, 211, 252,0.6);
+}
+
+th.mat-mdc-header-cell.mdc-data-table__header-cell.cdk-header-cell.cdk-column-patente.mat-column-patente.ng-star-inserted {
+  background-color: rgba(211, 211, 252,0.6);
+}
+
+th.mat-mdc-header-cell.mdc-data-table__header-cell.cdk-header-cell.cdk-column-id.mat-column-id.ng-star-inserted {
+  background-color: rgba(211, 211, 252,0.6);
+}
+
+th.mat-mdc-header-cell.mdc-data-table__header-cell.cdk-header-cell.cdk-column-acciones.mat-column-acciones.ng-star-inserted {
+  background-color: rgba(211, 211, 252,0.6);
+}
+
+th.mat-mdc-header-cell.mdc-data-table__header-cell.cdk-header-cell.cdk-column-modelo.mat-column-modelo.ng-star-inserted {
+  background-color: rgba(211, 211, 252,0.6);
+}

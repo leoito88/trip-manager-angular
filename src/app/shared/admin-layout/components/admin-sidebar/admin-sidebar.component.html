@@ -1,0 +1,20 @@
+<mat-nav-list>
+
+    <mat-list-item routerLink="/person/list" [routerLinkActive]="['is-active']" (click)="navegar('/person/list')">
+      <mat-icon mat-list-icon>person</mat-icon>
+      <h4 mat-line *ngIf="isExpanded">Administración de Pasajeros</h4>
+    </mat-list-item>
+
+    <mat-list-item routerLink="/trips/list" [routerLinkActive]="['is-active']" (click)="navegar('/trips/list')">
+      <mat-icon mat-list-icon>luggage</mat-icon>
+      <h4 mat-line *ngIf="isExpanded">Administración de Viajes</h4>  
+    </mat-list-item>
+
+    <mat-list-item routerLink="/buses/list" [routerLinkActive]="['is-active']" (click)="navegar('/buses/list')">
+      <mat-icon mat-list-icon>directions_bus</mat-icon>
+      <h4 mat-line *ngIf="isExpanded">Administración de Colectivos</h4>
+    </mat-list-item>
+    
+</mat-nav-list>
+  
+  

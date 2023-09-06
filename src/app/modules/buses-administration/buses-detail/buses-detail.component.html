@@ -1,0 +1,83 @@
+<form [formGroup]="busForm" (ngSubmit)="guardarCambios()">
+  <mat-card class="bus-container" style="padding: 20px">
+
+    <div class="title">
+      <button type="button" class="go-back-button" mat-icon-button (click)="volverAtras()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+  
+      <h2>Editando la información de un Colectivo</h2>
+    </div>
+  
+    <mat-form-field class="bus-input">
+      <mat-label>Patente</mat-label>
+      <input matInput type="text" formControlName="patente">
+        
+      <div *ngIf="busForm.controls['patente'].invalid && (busForm.controls['patente'].dirty || busForm.controls['patente'].touched)">
+        <mat-hint *ngIf="busForm.controls['patente'].errors['required']" style="color: red">
+          Por favor complete el campo requerido
+        </mat-hint>
+      </div>
+    </mat-form-field>
+  
+    <mat-form-field class="bus-input">
+      <mat-label>Cantidad de Asientos:</mat-label>
+      <input matInput type="number" formControlName="cantidadAsientos">
+  
+      <div *ngIf="busForm.controls['cantidadAsientos'].invalid && (busForm.controls['cantidadAsientos'].dirty || busForm.controls['cantidadAsientos'].touched)">
+        <mat-hint *ngIf="busForm.controls['cantidadAsientos'].errors['required']" style="color: red">
+          Por favor complete el campo requerido
+        </mat-hint>
+  
+        <mat-hint *ngIf="busForm.controls['cantidadAsientos'].errors['min']" style="color: red">
+          La cantidad de asientos debe ser mayor o igual a 0 asientos
+        </mat-hint>
+  
+        <mat-hint *ngIf="busForm.controls['cantidadAsientos'].errors['max']" style="color: red">
+          La cantidad de asientos debe ser menor o igual a 100 asientos
+        </mat-hint>
+      </div>
+  
+    </mat-form-field>
+
+    <!-- <mat-form-field class="bus-input">
+      <mat-label>ModeloID:</mat-label>
+
+        <mat-select formControlName="modeloId">
+          <mat-option value="1">1 - Chevrolet</mat-option>
+          <mat-option value="2">2 - Chevrolet</mat-option>
+          <mat-option value="3">3 - Volkswagen</mat-option>
+        </mat-select>
+
+        <div *ngIf="busForm.controls['modeloId'].invalid && (busForm.controls['modeloId'].dirty || busForm.controls['modeloId'].touched)">
+          <mat-hint *ngIf="busForm.controls['modeloId'].errors['required']" style="color: red">
+            complete el campo
+          </mat-hint>
+        </div>
+      </mat-form-field> -->
+
+
+    <mat-form-field class="bus-input">
+      <mat-label>ID Modelo - Nombre - Marca</mat-label>
+
+      <mat-select formControlName="modeloId">
+        <!-- <mat-option disabled> -- </mat-option> -->
+        <mat-option *ngFor="let model of modelList" [value]="model.id">
+          {{model.id}} - {{model.nombre}} - {{model.marca}}
+        </mat-option>
+      </mat-select>
+
+      <div *ngIf="busForm.controls['modeloId'].invalid && (busForm.controls['modeloId'].dirty || busForm.controls['modeloId'].touched)">
+        <mat-hint *ngIf="busForm.controls['modeloId'].errors['required']" style="color: red">
+          complete el campo
+        </mat-hint>
+      </div>
+
+    </mat-form-field> 
+   
+    <button class="submit" type="submit" mat-button [disabled]="busForm.invalid">Guardar Cambios</button>
+  </mat-card>
+</form>
+  
+  
+  

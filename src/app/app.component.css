@@ -1,0 +1,41 @@
+.toptitle{
+  font-family: 'Roboto', sans-serif;
+  margin-top: 0px;
+  padding: 20px;
+  height: 40px;
+  background-image: linear-gradient(45deg, rgba(59, 130, 163, 0.7), rgba(134, 204, 68, 0.7));
+  text-align: center;
+  color: #fff;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+}
+
+.image {
+  margin-left: -5px;
+  margin-top: 5px;
+}
+  
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.avatar{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 10px;
+  filter: grayscale(.8);
+  transition: .6s;
+}
+
+.avatar:hover{
+  filter:grayscale(0);
+}

@@ -1,0 +1,40 @@
+<div class="body">
+ <div style="text-align: center">
+    <h1>Administración de Pasajeros</h1>
+ </div>
+ <div class="botonmas">
+    <button mat-fab color="accent" (click)="crearPersona()">
+      <mat-icon class="mas">add</mat-icon>
+    </button>
+ </div>
+
+ <div *ngFor="let pers of personList" class="persona-container">
+   <div class="container">
+      <div class="datos">
+       <span>Nombre: {{pers.nombre}}</span>
+       <span>Apellido: {{pers.apellido}}</span>
+       <span>Edad: {{pers.edad}}</span>
+       <span>Nro Registro: {{pers.id}}</span>
+      </div>
+      <div class="mayage">
+        <div *ngIf="pers.edad >= 18">
+         <span style="font-weight: bold;color: green;text-align: center;" >Es mayor de edad</span>
+        </div>
+
+        <div *ngIf="pers.edad < 18">
+         <span style="font-weight: bold;color: red;text-align: center">Es menor de edad</span>
+        </div>
+      </div>
+   </div>
+    
+    <div class="buttons">
+      <button mat-raised-button (click)="seleccionarPersona(pers)" class="edit-but">
+        <mat-icon>edit_square</mat-icon>Editar
+      </button>
+  
+      <button mat-raised-button (click)="borrarPersona(pers)" class="delete-but">
+        <mat-icon>delete</mat-icon>Borrar
+      </button>
+    </div>
+  </div>
+</div>

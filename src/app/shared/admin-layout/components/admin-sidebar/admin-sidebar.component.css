@@ -1,0 +1,11 @@
+.mat-nav-list {
+  position: relative;
+  z-index: 2;
+}
+
+.is-active {
+  background-color:  rgba(63, 81, 181, 0.85);
+  color: #fff;
+  border-radius: 5px;
+  transition: .8s;
+}

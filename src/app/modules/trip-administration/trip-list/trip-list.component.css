@@ -1,0 +1,46 @@
+.botonmas{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.mdc-data-table__cell{
+  text-align: center;
+}
+
+.mdc-data-table__header-cell{
+  text-align: center;
+}
+
+.body{
+  margin: 20px;
+}
+
+th.mat-mdc-header-cell.mdc-data-table__header-cell.cdk-header-cell.cdk-column-destino.mat-column-destino.ng-star-inserted {
+  background-color: rgba(211, 211, 252,0.6);
+}
+
+th.mat-mdc-header-cell.mdc-data-table__header-cell.cdk-header-cell.cdk-column-origen.mat-column-origen.ng-star-inserted {
+  background-color: rgba(211, 211, 252,0.6);
+}
+
+th.mat-mdc-header-cell.mdc-data-table__header-cell.cdk-header-cell.cdk-column-id.mat-column-id.ng-star-inserted {
+  background-color: rgba(211, 211, 252,0.6);
+}
+
+th.mat-mdc-header-cell.mdc-data-table__header-cell.cdk-header-cell.cdk-column-acciones.mat-column-acciones.ng-star-inserted {
+  background-color: rgba(211, 211, 252,0.6);
+}
+
+th.mat-mdc-header-cell.mdc-data-table__header-cell.cdk-header-cell.cdk-column-fechaSalida.mat-column-fechaSalida.ng-star-inserted {
+  background-color: rgba(211, 211, 252,0.6);
+}
+
+th.mat-mdc-header-cell.mdc-data-table__header-cell.cdk-header-cell.cdk-column-fechaLlegada.mat-column-fechaLlegada.ng-star-inserted {
+  background-color: rgba(211, 211, 252,0.6);
+}
+
+th.mat-mdc-header-cell.mdc-data-table__header-cell.cdk-header-cell.cdk-column-colectivo.mat-column-colectivo.ng-star-inserted {
+  background-color: rgba(211, 211, 252,0.6);
+}
